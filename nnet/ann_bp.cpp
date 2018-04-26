@@ -83,7 +83,7 @@ Ann_bp::Ann_bp(int _SampleN, int nNIL, int nNOL, const int nNHL, float _sR) :
 // 定义析构函数
 Ann_bp::~Ann_bp()
 {
-	//释放权值空间
+	// 释放权值空间
 	for (int i = 0; i < numNodesInputLayer; ++i)
 		delete[] weights[0][i];
 	for (int i = 1; i < numNodesHiddenLayer; ++i)
@@ -92,12 +92,12 @@ Ann_bp::~Ann_bp()
 		delete[] weights[i];
 	delete[] weights;
 
-	//释放偏置空间
+	// 释放偏置空间
 	for (int i = 0; i < 2; ++i)
 		delete[] bias[i];
 	delete[] bias;
 
-	//释放所有样本的权值更新量存储空间
+	// 释放所有样本的权值更新量存储空间
 	for (int k = 0; k < SampleCount; ++k) 
 	{
 		for (int i = 0; i < numNodesInputLayer; ++i)

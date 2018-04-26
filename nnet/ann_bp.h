@@ -24,7 +24,7 @@ class Ann_bp
 		~Ann_bp();
 
 		void train(int _sampleNum, float** _trainMat, int** _labelMat);
-		void predict(float* in, float* proba);
+		void predict(float* in);
 
 	private:
 		int numNodesInputLayer;
